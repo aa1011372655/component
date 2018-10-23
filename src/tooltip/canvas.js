@@ -100,7 +100,9 @@ class CanvasTooltip extends Tooltip {
       const crosshairGroup = new Crosshair(Util.mix({
         plot,
         plotRange: this.get('plotRange'),
-        canvas: this.get('canvas')
+        canvas: this.get('canvas'),
+        // @2018-10-23 by blue.lb 这里需要传入是否转换了坐标
+        isTransposed: this.get('isTransposed')
       }, this.get('crosshairs')));
       crosshairGroup.hide();
       this.set('crosshairGroup', crosshairGroup);
